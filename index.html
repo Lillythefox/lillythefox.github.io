@@ -3,10 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Lilly the fox's site </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/opendyslexic" rel="stylesheet" type="text/css"/> 
   </head>
   <body>
     <span class="main-title-typed" id="main-title-typed"></span><br>
-      <p1>Lilly she/her</p1><br><p1>Interested in: Cyber security, Physical security and Film making. </p1>
+    <div id="main-text">
+      <p1>Lilly she/her</p1><br><p1>Interested in: Cyber security, Physical security and Film making. </p1><br>
+      <button type="button" onclick="DyslexicMode()">Click Me</button>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
@@ -17,21 +24,28 @@
     };
     
     new Typed('.main-title-typed', options);
+  </script>
+  <script>
+  function DyslexicMode(){
+      var element = document.getElementById("main-text");
+      element.style.fontFamily = "OpenDyslexic3Bold";
+      element.style.fontSize = "18px";
+      element.style.letterSpacing = "5px";
+      element.style.color = "#0a9b00fd";
 
-    
+  }
   </script>
   <style>
     .main-title-typed{
       text-align: center;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-family: "Bebas Neue";
       font-size: 55px;
       color: #10FF00;
       font-style: normal;
-      font-variant: small-caps;
     }
     body{
       background-color: black;
-      font-family: "sans-serif";
+      font-family: "Source Code Pro";
       color: #10FF00;
     }
   </style>
